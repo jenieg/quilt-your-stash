@@ -1,0 +1,27 @@
+/** RESET STYLES **/
+
+/**Box-Sizing Model**/
+*, *::before, *::after { 
+    box-sizing: border-box; }
+
+/**Remove Default Margin**/
+* { 
+    margin: 0; }
+
+/**Accessible Line Hight + Improved Text Rendering**/
+body { 
+    line-height: 1.5; 
+    -webkit-font-smoothing: antialiased; }
+
+/**Improve Media Default**/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%; }
+
+/**Remove built-in form style**/
+input, button, textarea, select {
+    font: inherit; }
+
+/**Avoid Text Overflow**/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word; }
