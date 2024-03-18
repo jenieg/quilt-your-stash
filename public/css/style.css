@@ -18,8 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** INDEX STYLES **/
-body {
+.index-body {
     background-color: #e6f8ff;
+}
+.index-h1 {
+    text-align: center;
 }
 .index-container {
     min-height: 100vh;
@@ -41,7 +44,7 @@ body {
     padding: 5px;
     margin: 7px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
     background-color: #0073e6;
     text-align: center;
@@ -52,6 +55,9 @@ body {
 /** LOGIN STYLES **/
 
 /** SIGNUP STYLES **/
+.signup-body {
+    background-color: #e6f8ff;
+}
 .signup-container {
     min-height: 100dvh;
     display: flex;
