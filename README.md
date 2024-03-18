@@ -10,7 +10,7 @@
 ![EXPRESS BADGE](https://img.shields.io/static/v1?label=|&message=EXPRESS&color=5a5a5a&style=flat&logo=express) 
 ![MONGODB BADGE](https://img.shields.io/static/v1?label=|&message=MONGODB&color=5a5a5a&style=flat&logo=mongodb)
 
-This is a full-stack web application inventory tracking system that combines my passion for quilting and coding. Local Auth through passport.js enabled so users can create their own collection.
+This is a full-stack web application inventory tracking system that combines my passion for quilting and coding. Local Auth through passport.js enabled; Users can sign up, sign in, and create their own inventory collection.
 
 ## Optimizations
 - Responsive design needs to be done
