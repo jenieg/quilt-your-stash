@@ -10,22 +10,84 @@
     font-weight: 400;
     font-style: normal
 }
+body {
+    font-family: 'Arimo', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', sans-serif;
+}
+
 /** INDEX STYLES **/
+body {
+    background-color: #e6f8ff;
+}
 .index-container {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.index-widget {
+    width: 75dvw;
+    height: 60dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.index-h1 {
-    font-family: Lobster, sans-serif;
-}
+
 .index-btn-style {
-    font-family: Arimo, sans-serif;
+    width: 150px;
+    padding: 5px;
+    margin: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    background-color: #0073e6;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
 }
+
 /** LOGIN STYLES **/
 
 /** SIGNUP STYLES **/
+.signup-container {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.signup-widget {
+    width: 75dvw;
+    height: 60dvh;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & form {
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & input {
+            margin: 7px;
+            padding: 5px;
+            width: 150%;
+            border-radius: 8px;
+            border: 1px solid white;
+        }
+    }
+}
+#signup-btn {
+    width: 90%;
+    color: white;
+    font-weight: 600;
+    background-color: #0073e6;
+    border: none;
+}
 
 /** TODOS STYLES **/
