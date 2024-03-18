@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!--Lobster Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!--Arimo Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <title>Quilt Your Stash</title>
+    
 </head>
-<body>
-    <h1 class="">Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+<body class="bgblue">
+    <div class="container">
+        <div class="widget">
+            <h1 class="">Quilt Your Stash</h1>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+            <form action="/todos/createTodo" method='POST'>
+                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+                <input type="submit" id="btn">
+            </form>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
-    </form>
+            <ul>
+            <% todos.forEach( el => { %>
+                    <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                        <span class='del'> Delete </span>
+                    </li>
+            <% }) %>    
+            </ul>
 
-    <a href="/logout">Logout</a>
+            <!-- <h2><%= user.userName %> has <%= left %> things left to do.</h2> -->
 
+            
+
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

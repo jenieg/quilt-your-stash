@@ -4,25 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Lobster Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!--Arimo Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!--CSS-->
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/style.css">
-    <title>Document</title>
+
+    <title>Quilt Your Stash</title>
 </head>
 <body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+    <div class="container">
+        <div class="widget">
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" id="btn">
+            </form>
+
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+        </div>
+    </div>
 </body>
 </html>
