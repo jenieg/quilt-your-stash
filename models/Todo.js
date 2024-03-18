@@ -1,13 +1,20 @@
 const mongoose = require('mongoose')
 
 const TodoSchema = new mongoose.Schema({
-  todo: {
+  designer: {
     type: String,
-    required: true,
   },
-  completed: {
-    type: Boolean,
-    required: true,
+  manufacturer: {
+    type: String,
+  },
+  fabrictype: {
+    type: String,
+  },
+  color: {
+    type: String,
+  },
+  amount: {
+    type: String,
   },
   userId: {
     type: String,

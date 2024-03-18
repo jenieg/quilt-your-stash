@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Quilt Your Stash</title>
 </head>
@@ -28,7 +28,7 @@
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 <input type="password" name="confirmPassword" placeholder="Confirm Password">
-                <input type="submit" id="btn">
+                <input type="submit" id="btn" value="Sign Up">
             </form>
             <% if (locals.messages.errors) { %>
                 <% messages.errors.forEach( el => { %>

@@ -13,37 +13,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/119c254871.js" crossorigin="anonymous"></script>
     <!--CSS-->
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>Quilt Your Stash</title>
     
 </head>
 <body class="bgblue">
     <div class="container">
-        <div class="widget">
+        <div class="todo-widget">
             <h1 class="">Quilt Your Stash</h1>
+            <div class="layout">
+                <form action="/todos/createTodo" method='POST' class="fabric-form">
+                    <input type="text" placeholder="Designer" name='designer'>
+                    <input type="text" placeholder="Manufacturer" name='manufacturer'>
+                    <input type="text" placeholder="Print / Solid / Blender" name='fabrictype'>
+                    <input type="text" placeholder="Color" name='color'>
+                    <input type="text" placeholder="Yardage Amount" name='amount'>
+                    <input type="submit" id="todo-btn" value="Add To Stash">
+                </form>
 
-            <form action="/todos/createTodo" method='POST'>
-                <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-                <input type="submit" id="btn">
-            </form>
+                <table class="fabric-table">
+                    <thead>
+                        <tr>
+                            <th>Designer</th>
+                            <th>Manufacturer</th>
+                            <th>Type</th>
+                            <th>Color</th>
+                            <th>Yardage</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% todos.forEach(el => { %>
+                            <tr class='todoItem' data-id='<%=el._id%>'>
+                                <td><%= el.designer %></td>
+                                <td><%= el.manufacturer %></td>
+                                <td><%= el.fabrictype %></td>
+                                <td><%= el.color %></td>
+                                <td><%= el.amount %></td>
+                                <td class='del'></td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>           
 
-            <ul>
-            <% todos.forEach( el => { %>
-                    <li class='todoItem' data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                        <span class='del'> Delete </span>
-                    </li>
-            <% }) %>    
-            </ul>
-
-            <!-- <h2><%= user.userName %> has <%= left %> things left to do.</h2> -->
-
-            
-
-            <a href="/logout">Logout</a>
+            <div class="footer">
+                <a href="/logout">Logout</a>
+            </div>            
         </div>
     </div>
     <script src="js/main.js"></script>

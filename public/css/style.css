@@ -73,3 +73,73 @@ h1, h2, h3, h4, h5, h6 {
 /** SIGNUP STYLES **/
 
 /** TODOS STYLES **/
+.todo-widget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & form {
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & input {
+            margin: 5px;
+            padding: 5px;
+            width: 60%;
+            border-radius: 8px;
+            border: 1px solid gray;
+        }
+    }
+}
+#todo-btn {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+    background-color: #0073e6;
+    border: none;
+}
+
+.fabric-table {
+    margin-top: 50px;
+    width: 75dvw;
+    border-collapse: collapse;
+}
+.fabric-table th, .fabric-table td {
+    width: 25%; /* Adjust this value based on the number of columns you have */
+    text-align: left; /* Align text to the left */
+    padding: 5px;
+}
+.fabric-table thead th {
+    background-color: #0073e6;
+    color: white;
+}
+.fabric-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+.fabric-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+.fabric-table .del::after {
+    content: "\f2ed";
+    font-family: "FontAwesome";
+    color: red;
+    cursor: pointer;
+}
+.footer {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
