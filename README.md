@@ -1,4 +1,5 @@
 # Quilt Your Stash | [Visit the Live Site](https://quilt-your-stash.onrender.com/)
+This is hosted on render so there may be delay before the app is loaded.
 
 ![Jenie | Software Engineer](/public/assets/sew-your-stash.png)
 
